@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>躲避小行星</title>
+	<meta name="author" content="Wang Mengfei">
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="EscapePlanet.js"></script>
+	<link rel="stylesheet" type="text/css" href="EscapePlanet.css">
+</head>
+<body>
+	<!-- 躲避小行星游戏规则
+			点击play 后 按方向键 右键 开启游戏
+			方向键控制小火箭前进、上升、下降
+			空格键发射子弹
+	 -->
+	<div id="game">
+		<div id="gameUI">
+			<div id="gameIntro">
+				<h1>Asteroid avoidance</h1>
+				<p>Click play and then press any key to start.</p>
+				<p><a id="gamePlay" class="button" href="">Play</a></p>
+			</div>
+			<div id="gameStats">
+				<p>Time: <span class="gameScore"></span> seconds.</p>
+				<p><a class="gameReset" href="">Reset</a></p>
+			</div>
+			<div id="gameComplete">
+				<h1>Game over!</h1>
+				<p>You survived for <span class="gameScore"></span> seconds.</p>
+				<p><a class="gameReset button" href="">Play again</a></p>
+			</div>
+		</div>
+		<canvas id="gameCanvas" width="800px" height="600px"></canvas>
+		<audio id="gameSoundBackground" loop>
+			<source src="background.mp3">
+		</audio>
+		<audio id="gameSoundThrust" loop>
+			<source src="thrust.mp3">
+		</audio>
+		<audio id="gameSoundDeath" loop>
+			<source src="death.mp3">
+		</audio>
+	</div>
+</body>
+</html>
